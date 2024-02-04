@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('passport');
+var BookingController = require("./../controllers/booking")
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Booking Routes');
-});
+
+router.get('/seats', BookingController.getAllBuses);
+router.post('/addBus', BookingController.bookBus);
+router.patch('/seats/:id', passport.authenticate('jwt', {session: false}), BookingController.bookSeat);
 
 module.exports = router;

@@ -28,9 +28,7 @@ exports.registerUser = async (req, res) => {
 };
 
 const userLogin = async (email, password) =>{
-    const encryptData = new Users({ email,password });
-    encryptData.encryptFieldsSync();
-    const user = await Users.findOne({ email: encryptData.email });
+    const user = await Users.findOne({ email });
     if (user) {
       if (password == user.password) {
         return user;
