@@ -1,0 +1,11 @@
+{
+    "environment": {
+        "name": "development",
+        "dbUrl": "mongodb://localhost:27017/bus_booking",
+        "dbEncKey":"1234567890123456",
+        "jwtSecretKey": "1234567890==",
+        "tokenExpire": 1200000
+    }
+     
+}
+  
