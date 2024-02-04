@@ -88,6 +88,41 @@ exports.bookSeat = async (req, res) => {
     }
 }
 
+exports.resetAllSeats = async (req, res) => {
+    try{
+        let { id } = req.params;
+        if(id){
+            let status = await Seats.updateMany({
+                bus: id
+            },{
+                booked : false,
+                user: null
+            });
+            if(status.modifiedCount > 0){
+                res.status(200).send({
+                    success: true,
+                    message: "Seat Reset"
+                })
+            }
+            else{
+                res.status(200).send({
+                    success: true,
+                    message: "No Data Found"
+                }) 
+            }
+           
+        }
+        else{
+            throw Error("Data not provided")
+        }
+    }catch(err) {
+        res.status(417).send({
+            success: false,
+            message: err
+        })
+    }
+}
+
 const addSeats = async (seats,busId) =>{
     try{
         let seatsArray = [];

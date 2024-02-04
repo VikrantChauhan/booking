@@ -6,11 +6,12 @@ const thisEnv = envConfig.get('environment');
 
 exports.registerUser = async (req, res) => {
     try{
-        let { name, email, password } = req.body;
+        let { name, email, password, role } = req.body;
         var new_user = new Users({
            name,
            email,
-           password
+           password,
+           role
         })
         let result = await new_user.save();
         if(result){

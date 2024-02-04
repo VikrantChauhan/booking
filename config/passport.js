@@ -13,6 +13,19 @@ passport.deserializeUser(function (user, done) {
     done(null, user);
 });
 
+exports.isAdmin = function () {
+    return function (req, res, next) {
+        if (req.user) {
+            if (req.user.role == 'admin') {
+                next();
+            } else {
+                res.send(403, 'Unauthorized Access');
+            }
+        } else
+            res.send(401, 'Session Expired');
+    };
+};
+
 passport.use(new JWTStrategy({
         jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
         secretOrKey   : thisEnv.jwtSecretKey
