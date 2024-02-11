@@ -1,7 +1,7 @@
 {
     "environment": {
         "name": "development",
-        "dbUrl": "mongodb+srv://chauhanvik1993@cluster0.fzog5us.mongodb.net/admin?retryWrites=true&replicaSet=atlas-g2cw1y-shard-0&readPreference=primary&srvServiceName=mongodb&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1&3t.uriVersion=3&3t.connection.name=atlas-g2cw1y-shard-0&3t.databases=admin&3t.alwaysShowAuthDB=true&3t.alwaysShowDBFromUserRole=true&3t.sslTlsVersion=TLS",
+        "dbUrl": "mongodb://chauhanvik1993:oV5i7m4rwzy8oxon@ac-acoyteu-shard-00-00.fzog5us.mongodb.net:27017,ac-acoyteu-shard-00-02.fzog5us.mongodb.net:27017/admin?ssl=true&retryWrites=true&replicaSet=atlas-g2cw1y-shard-0&readPreference=primary&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1",
         "dbEncKey":"1234567890123456",
         "jwtSecretKey": "1234567890==",
         "tokenExpire": 1200000
