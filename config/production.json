@@ -1,0 +1,11 @@
+{
+    "environment": {
+        "name": "production",
+        "dbUrl": "mongodb://chauhanvik1993:oV5i7m4rwzy8oxon@ac-acoyteu-shard-00-00.fzog5us.mongodb.net:27017,ac-acoyteu-shard-00-02.fzog5us.mongodb.net:27017/admin?ssl=true&retryWrites=true&replicaSet=atlas-g2cw1y-shard-0&readPreference=primary&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1",
+        "dbEncKey":"1234567890123456",
+        "jwtSecretKey": "1234567890==",
+        "tokenExpire": 1200000
+    }
+     
+}
+  
