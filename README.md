@@ -26,7 +26,7 @@ npm start
 
 ## 🚀 API Documentation
 
-Postman documentation Link -
+Postman documentation Link ( app hosted on aws - http://ec2-13-201-91-115.ap-south-1.compute.amazonaws.com/ ) - https://documenter.getpostman.com/view/6757680/2s9YywdeAu
 
 `User`
 
